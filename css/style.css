@@ -735,7 +735,9 @@ b i:last-child {
     overflow: hidden;
     display: block;
 }
-
+.portfolio_item img {
+    padding: 10px;
+}
 .portfolio_item .portfolio_item_hover {
     position: absolute;
     top: 0px;
