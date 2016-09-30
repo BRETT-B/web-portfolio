@@ -1,6 +1,7 @@
 <?php
 
-    $yourname;  $email;
+    $yourname;  
+    $email;
     $message;
     $from;
     $to;
@@ -17,10 +18,10 @@
     if(isset($_POST['message'])){
           $email=$_POST['message'];
     }
-    $from = 'From: http://www.brettburdick.com'; 
+    $from = 'From: burdickbrett.com'; 
     $to = 'burdickbrett@gmail.com'; 
     $subject = 'Email Inquiry from Web Portfolio';
-    $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+    $body = "From: $yourname\nE-Mail: $email\nMessage:\n $message";
     // if(isset($_POST['g-recaptcha-response'])){
     //       $captcha=$_POST['g-recaptcha-response'];
     // }
