@@ -16,7 +16,7 @@
           $email=$_POST['email'];
     }
     if(isset($_POST['message'])){
-          $email=$_POST['message'];
+          $message=$_POST['message'];
     }
     $from = 'From: burdickbrett.com'; 
     $to = 'burdickbrett@gmail.com'; 
@@ -27,13 +27,13 @@
           $captcha=$_POST['g-recaptcha-response'];
     }
     if(!$captcha){
-          echo '<h2>Please check the the captcha form.</h2>';
+          echo '<h2>Please check the captcha form.</h2>';
           exit;
     }
     $secretKey = "6LfT7gcUAAAAAHIemAOFDIyeKcqppQ7G-y8Acn3p";
     $ip = $_SERVER['REMOTE_ADDR'];
     $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
-    
+
     if ($_POST['submit']) {
           if (mail ($to, $subject, $body, $from)) { 
               echo '<p>Thank you for your email!</p>';
