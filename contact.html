@@ -85,11 +85,11 @@
     <!-- main-container -->
     <div class="container main-container">
         <div class="col-md-6">
-            <form action="#" method="post">
+            <form action="mail.php" method="post" id="contact-form" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="input-contact">
-                            <input type="text" name="fullName" placeholder="Your Name" tabindex="1" required autofocus>
+                            <input type="text" name="yourname" placeholder="Your Name" tabindex="1" required autofocus>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -99,12 +99,13 @@
                     </div>
                     <div class="col-md-12">
                         <div class="textarea-contact">
-                            <textarea name="body" placeholder="Message" tabindex="3" required autofocus></textarea>
+                            <textarea name="message" placeholder="Message" tabindex="3" required autofocus></textarea>
                         </div>
                     </div>
                     <div class="g-recaptcha col-md-12 input-contact" data-sitekey="6LfT7gcUAAAAAIolJHsWB9AHgZcf2bWvyOIP7GIz"></div>
                     <div class="col-md-12">
-                        <a href="#" class="btn btn-box">Send</a>
+                        <!-- <a href="#" class="btn btn-box">Send</a> -->
+                        <input class="btn btn-box" id="submit" name="submit" type="submit" value="Send">
                     </div>
                 </div>
             </form>
@@ -112,7 +113,7 @@
 
         <div class="col-md-6">
             <h3 class="text-uppercase">contact me</h3>
-            <h5>Please fill out the form and I will be in touch</h5>
+            <h5 class="text-uppercase">Please fill out the form and I will be in touch</h5>
             <div class="h-30"></div>
             <p>I truly appreciate your interest. Please feel free to contact me through the form or with the information below. I would be happy to answer any questions or possibly discuss how I can contribute to your team.</p>
             <div class="contact-info">
