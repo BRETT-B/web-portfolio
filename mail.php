@@ -8,7 +8,6 @@
     $subject;
     $body;
     $captcha;
-    $response;
 
     if(isset($_POST['yourname'])){
           $yourname=$_POST['yourname'];
@@ -28,7 +27,7 @@
           $captcha=$_POST['g-recaptcha-response'];
     }
     if(!$captcha){
-          $response = 'In order for me to prevent spammers, I require a confirmed captcha. Thank you!';
+          echo '<h2>In order for me to prevent spammers, I require a confirmed captcha. Thank you!</h2>';
           exit;
     }
     $secretKey = "6LfT7gcUAAAAAHIemAOFDIyeKcqppQ7G-y8Acn3p";
@@ -37,9 +36,9 @@
 
     if ($_POST['submit']) {
           if (mail ($to, $subject, $body, $from)) { 
-              $response = 'Thank you '.$yourname.'. Your message has been sent.'
+              echo '<p>Thank you for your email!</p>';
           } else { 
-              $response = 'Oops! There was an error sending your message.' 
+              echo '<p>Oops! An error occurred. Try sending your message again.</p>'; 
           }
       }
 
