@@ -13,9 +13,9 @@ $(document).ready(function() {
 				url: 'mail.php',
 				type: 'POST',
 				data: {yourname:yourname, email:email, message:message},
-				success: function(data){
-					$('form').trigger('reset');
-					$('#success-message').fadeIn().html(data);
+				success: function(response){
+					$('input[type=text], input[type=email], textarea').val('');
+					$('#success-message').fadeIn().html(response);
 					setTimeout(function({
 						$('#success-message').fadeOut('slow');
 					}, 2000);
