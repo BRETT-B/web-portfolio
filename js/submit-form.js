@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('#submit').click(function(){
+	$('form.contact').on('submit', function(){
 		var yourname = $('#yourname').val();
 		var email = $('#email').val();
 		var message = $('#message').val();
@@ -10,7 +10,7 @@ $(document).ready(function() {
 		else {
 			$('#error-message').html('');
 			$.ajax({
-				url: 'http://www.brettburdick.com/mail.php',
+				url: 'mail.php',
 				type: 'POST',
 				data: {yourname:yourname, email:email, message:message},
 				success: function(data){
