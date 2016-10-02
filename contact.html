@@ -85,27 +85,28 @@
     <!-- main-container -->
     <div class="container main-container">
         <div class="col-md-6">
-            <form action="mail.php" method="post" id="contact-form" enctype="multipart/form-data">
+            <form action="mail.php" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="input-contact">
-                            <input type="text" name="yourname" placeholder="Your Name" tabindex="1" required autofocus>
+                            <input id="yourname" type="text" name="yourname" placeholder="Your Name" tabindex="1" required autofocus>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="input-contact">
-                            <input type="email" name="email" placeholder="Your Email" tabindex="2" required autofocus>
+                            <input id="email" type="email" name="email" placeholder="Your Email" tabindex="2" required autofocus>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="textarea-contact">
-                            <textarea name="message" placeholder="Message" tabindex="3" required autofocus></textarea>
+                            <textarea id="message" name="message" placeholder="Message" tabindex="3" required autofocus></textarea>
                         </div>
                     </div>
                     <div class="g-recaptcha col-md-12 input-contact" data-sitekey="6LfT7gcUAAAAAIolJHsWB9AHgZcf2bWvyOIP7GIz"></div>
                     <div class="col-md-12">
-                        <?php echo $response; ?>
                         <input class="btn btn-box" id="submit" name="submit" type="submit" value="Send">
+                        <span id="error-message" class="text-danger"></span>
+                        <span id="success-message" class="text-success"></span>
                     </div>
                 </div>
             </form>
@@ -148,6 +149,8 @@
 
     <!--  custom script -->
     <script src="js/custom.js"></script>
+    <!-- submit form jquery -->
+    <script src="js/submit-form.js"></script>
 
 </body>
 
