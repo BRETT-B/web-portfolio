@@ -1,10 +1,11 @@
 $(document).ready(function() {
 
-	$('form.contact').on('submit', function(event){
-		event.preventDefault();
+	$('#submit').click(function(){
+		
 		var yourname = $('#yourname').val();
 		var email = $('#email').val();
 		var message = $('#message').val();
+		var formData = 'yourname='+yourname+'&email='+email+'&message='+message;
 
 		if (yourname == '' || email == '' || message ==''){
 			$('#error-message').html('All fields are required');
@@ -12,9 +13,9 @@ $(document).ready(function() {
 		else {
 			$('#error-message').html('');
 			$.ajax({
-				url: '/mail.php',
 				type: 'POST',
-				data: {yourname:yourname, email:email, message:message},
+				url: 'mail.php',
+				data: formData,
 				success: function(response){
 					$('input[type=text], input[type=email], textarea').val('');
 					$('#success-message').fadeIn().html(response);
