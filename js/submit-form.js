@@ -13,7 +13,7 @@ $(document).ready(function() {
 			$('#error-message').html('');
 			$.ajax({
 				type: 'POST',
-				url: 'mail.php',
+				url: '../mail.php',
 				data: {
 					yourname: yourname,
 					email: email,
