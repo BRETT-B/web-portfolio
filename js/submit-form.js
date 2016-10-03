@@ -22,7 +22,7 @@ $(document).ready(function() {
 				success: function(response){
 					console.log('Error:'+response)
 					$('input[type=text], input[type=email], textarea').val('');
-					$('#success-message').fadeIn().html(response);
+					$('#success-message').fadeIn().html('Testing innerHTML');
 					setTimeout(function(){
 						$('#success-message').fadeOut('slow');
 					}, 2000);
