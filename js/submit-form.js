@@ -20,7 +20,7 @@ $(document).ready(function() {
 					message: message
 				},
 				success: function(response){
-					console.log('Error:'response)
+					console.log('Error:'+response)
 					$('input[type=text], input[type=email], textarea').val('');
 					$('#success-message').fadeIn().html(response);
 					setTimeout(function(){
