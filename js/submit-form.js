@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-	$('#submit').click(function(){
-		
+	$('#submit').click(function(event){
+		event.preventDefault();
 		var yourname = $('#yourname').val();
 		var email = $('#email').val();
 		var message = $('#message').val();
