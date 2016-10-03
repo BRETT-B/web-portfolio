@@ -5,7 +5,7 @@ $(document).ready(function() {
 		var yourname = $('#yourname').val();
 		var email = $('#email').val();
 		var message = $('#message').val();
-		var formData = 'yourname='+yourname+'&email='+email+'&message='+message;
+		var formData = {yourname: yourname, email: email, message: message}
 
 		if (yourname == '' || email == '' || message ==''){
 			$('#error-message').html('All fields are required');
