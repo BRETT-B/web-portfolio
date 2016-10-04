@@ -21,9 +21,9 @@ $(document).ready(function() {
 				data: formData,
 				success: function(response){
 					$('input[type=text], input[type=email], textarea').val('');
-					if (typeof $('.g-recaptcha') != 'undefined') {
-						grecaptcha.reset();
-					}
+					// if (typeof $('.g-recaptcha') != 'undefined') {
+					// 	grecaptcha.reset();
+					// }
 					$('#success-message').fadeIn().html(response);
 					setTimeout(function(){
 						$('#success-message').fadeOut('slow');
