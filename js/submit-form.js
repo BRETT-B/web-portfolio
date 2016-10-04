@@ -11,7 +11,10 @@ $(document).ready(function() {
 		var formData = {yourname: yourname, email: email, message: message};
 
 		if (yourname == '' || email == '' || message ==''){
-			$('#error-message').html('All fields are required');
+			$('#error-message').fadeIn().html('All fields are required');
+			setTimeout(function(){
+				$('#error-message').fadeOut('slow');
+			}, 4000);
 		}
 		else {
 			$('#error-message').html('');

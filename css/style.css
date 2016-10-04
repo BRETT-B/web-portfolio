@@ -1129,7 +1129,7 @@ textarea:focus {
     padding: 10px 50px;
     border-radius: 0;
     color: #FFF;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 500;
