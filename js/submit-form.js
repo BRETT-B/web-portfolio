@@ -27,7 +27,7 @@ $(document).ready(function() {
 					$('#success-message').fadeIn().html(response);
 					setTimeout(function(){
 						$('#success-message').fadeOut('slow');
-					}, 3000);
+					}, 5000);
 
 				}
 			});
