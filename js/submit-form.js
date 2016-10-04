@@ -1,10 +1,14 @@
 $(document).ready(function() {
-
+	// whoosh sound when email is sent
+	var mailSound = document.getElementById('mailSound');
+		mailSound.src = '../sounds/mailsent.wav';
+	// send form data to php script with AJAX
 	$('#submit').click(function(event){
 		event.preventDefault();
 		var yourname = $('#yourname').val();
 		var email = $('#email').val();
 		var message = $('#message').val();
+		var formData = {yourname: yourname, email: email, message: message};
 
 		if (yourname == '' || email == '' || message ==''){
 			$('#error-message').html('All fields are required');
@@ -14,24 +18,17 @@ $(document).ready(function() {
 			$.ajax({
 				type: 'POST',
 				url: '../mail.php',
-				data: {
-					yourname: yourname,
-					email: email,
-					message: message
-				},
+				data: formData,
 				success: function(response){
-					console.log('Error:'+response)
 					$('input[type=text], input[type=email], textarea').val('');
-					$('#success-message').fadeIn().html('Testing innerHTML');
+					$('#success-message').fadeIn().html(response);
 					setTimeout(function(){
 						$('#success-message').fadeOut('slow');
-					}, 2000);
+					}, 3000);
 
-				}, error: function(error){
-					console.log(error);
-					alert("Post error");
 				}
 			});
+			mailSound.play();
 		}
 		return false;
 	});
