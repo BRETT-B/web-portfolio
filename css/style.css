@@ -1140,7 +1140,10 @@ textarea:focus {
     border: 1px solid #FFF;
     color: #FFF;
 }
-
+span #success-message{
+    margin: 0;
+    padding-left: 10px;
+}
 
 /* single project page
 ==================================================*/
