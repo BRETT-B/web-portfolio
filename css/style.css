@@ -947,8 +947,6 @@ img.about-me-headshot {
 }
 .mb-wrap {
     width: 300px;
-    margin: 25px auto;
-    margin-left: 100px;
     position: relative;
 
 }
@@ -956,6 +954,7 @@ img.about-me-headshot {
 .mb-style-2 blockquote{
     padding-top: 70px;
     border: none;
+    text-align: initial !important;
 }
 
 .mb-style-2 blockquote:after {
@@ -965,10 +964,8 @@ img.about-me-headshot {
     content: '\275e'; 
     position: absolute;
     font-size: 70px;
-    text-align: center;
     top: 0px;
-    left: 50%;
-    margin-left: -250px;
+    right: 70%;
     color: #178BBD;
     
 }
@@ -979,7 +976,6 @@ img.about-me-headshot {
     height: 500px;
     position: absolute;
     top: 0px;
-    left: -50px;
     z-index: -1;
 }
 
@@ -994,9 +990,9 @@ img.about-me-headshot {
 
 }
 
-.mb-style-2 .mb-attribution {
+/* .mb-style-2 .mb-attribution {
     text-align: right;
-}
+} */
 
 .mb-style-2 .mb-author{
     text-transform: uppercase;
