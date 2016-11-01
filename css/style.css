@@ -6,7 +6,14 @@
 
 /* General
 ==================================================*/
-
+.img {
+    position: relative;
+    width:  450px;
+    height: 450px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
 html,
 body {
     background-color: #000;
@@ -945,62 +952,7 @@ img.about-me-headshot {
     border-radius: 25px;
     margin-top: 200px;
 }
-.mb-wrap {
-    width: 300px;
-    position: relative;
 
-}
-
-.mb-style-2 blockquote{
-    padding-top: 70px;
-    border: none;
-    text-align: initial !important;
-}
-
-.mb-style-2 blockquote:after {
-    font-family: 'icons';
-    width: 130px;
-    height: 130px;
-    content: '\275e'; 
-    position: absolute;
-    font-size: 70px;
-    top: 0px;
-    right: 70%;
-    color: #178BBD;
-    
-}
-
-.mb-style-2 blockquote:before{
-    content: '';
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    top: 0px;
-    z-index: -1;
-}
-
-.mb-style-2 blockquote p {
-    font-family: Baskerville, Georgia, serif;
-    font-size: 28px;
-    font-style: italic;
-    display: inline;
-    color: #178BBD;
-    text-shadow: 0 1px 1px rgba(255,255,255,0.5);
-    line-height: 46px;
-
-}
-
-/* .mb-style-2 .mb-attribution {
-    text-align: right;
-} */
-
-.mb-style-2 .mb-author{
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: bold;
-    color: #178BBD;
-    text-shadow: 0 1px 1px rgba(255,255,255,0.1);
-}
 @font-face {
     font-family: 'icons';
     src: url("font/icons.eot");
